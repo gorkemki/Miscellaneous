@@ -1,0 +1,23 @@
+
+
+
+def group_by_owners(files):
+    dict_out={}
+    list_out=[]
+    for key, value in files.items():
+        if value not in dict_out.keys():
+            dict_out[value]=[key]
+        else:
+            dict_out[value].append(key)
+            
+    return dict_out
+
+    
+files = {
+    'Input.txt': 'Randy',
+    'Code.py': 'Stan',
+    'Output.txt': 'Randy'
+}   
+print(group_by_owners(files))
+
+
